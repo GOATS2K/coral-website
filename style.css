@@ -1,30 +1,46 @@
-/*
-Replace this example stylesheet with your own.
-Please try to keep the code formatting nice.
 
-We want to see a sensible mobile-first, responsive design.
-This means the default styles are for the smallest mobile size.
-*/
-
-/* Multi-line rulesets must use whitespace for indentation consistently. */
 body {
-	/* note the indentation here */
-	background-color: #5bf;
-	color: #024;
+	background-color: #3c3b3d;
+	color: #ffffff;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* One-liners are fine for very simple rulesets. */
-h1 { font-family: sans-serif;}
-
-/* 
-You will probably need at least two media queries to handle larger screens.
-Your queries should be configured to work with your content
-*/
-@media screen and (min-width: 457px) {
-	/* Code inside media queries should be indented one step further. */
-	body { font-size: 1.2em }
+h1 {
+	font-size: 4em;
 }
-/*
-We don't want to see a min-width of 457px in your code
-This was chosen to match the template content.
-*/
+
+h2 {
+	font-size: 3em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+.full-height {
+	height: 100dvh;
+	/* ensure padding is included in height calculation */
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3em;
+}
+
+.futuristic-font {
+	font-family: "Michroma", monospace;
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+}
+
+.title {
+	margin: 0;
+}
