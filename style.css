@@ -1,33 +1,33 @@
-@font-face {
-	font-family: "Michroma";
-	src: url("assets/fonts/michroma.woff2") format("woff");
+/* import normalize, for consistent styles across browsers */
+@import url("/assets/css/normalize.css");
+@import url("/assets/css/fonts.css");
+
+
+:root {
+	--color-background: #3c3b3d;
+	--color-dark: #666467;
+	--color-light-1: #908d92;
+	--color-light-2: #b9b6bc;
+	--color-text: #e3dfe7;
+	--color-bright: #ffffff;
+	--color-black: #121212;
 }
 
 video {
-	min-width: 25%;
-	min-height: 25%;
+	min-width: 50%;
+	min-height: 50%;
 }
 
 body {
-	background-color: #3c3b3d;
-	color: #ffffff;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: "Fira Code", monospace;
 }
 
-h1 {
-	font-size: 4em;
-}
-
-h2 {
-	font-size: 3em;
-}
-
-h3 {
-	font-size: 2em;
-}
-
-h4 {
-	font-size: 1em;
+p {
+	font-size: 1.25em;
+	max-width: 80ch;
+	margin: auto;
 }
 
 .full-height {
@@ -70,9 +70,37 @@ h4 {
 }
 
 .bounce-animation {
-	animation: 2s infinite bounce;
+	animation: 2s infinite ease bounce;
 }
 
 .title {
+	font-size: 5em;
 	margin: 0;
+}
+
+.shadow {
+	-webkit-box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
+	-moz-box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
+	box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
+}
+
+.why-coral {
+	position: relative;
+	z-index: 10;
+	padding: 3em;
+	background-color: var(--color-black);
+}
+
+.highlight {
+	color: var(--color-bright);
+}
+
+.point {
+	padding: 2em;
+	background-color: var(--color-background);
+}
+
+.centered {
+	text-align: center;
+	margin-bottom: 1em;
 }
