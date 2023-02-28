@@ -1,3 +1,12 @@
+@font-face {
+	font-family: "Michroma";
+	src: url("assets/fonts/michroma.woff2") format("woff");
+}
+
+video {
+	min-width: 25%;
+	min-height: 25%;
+}
 
 body {
 	background-color: #3c3b3d;
@@ -39,6 +48,29 @@ h4 {
 .intro {
 	display: flex;
 	flex-direction: column;
+}
+
+.larger-icon {
+	align-self: center;
+	font-size: 4em;
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-25px);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.bounce-animation {
+	animation: 2s infinite bounce;
 }
 
 .title {
