@@ -8,4 +8,13 @@
 // Your code should be DRY, if you have repeated code, consider refactoring as a function with arguments for example.
 // We like to see what you can do. Be creative.
 
-console.log("Obviously, you should replace this with some event handlers.")
+const scrollToBanner = () => {
+  const whyBanner = document.querySelector("#why-coral");
+  whyBanner.scrollIntoView({behavior: "smooth"});
+}
+
+const scrollButton = document.querySelector("#scrollButton");
+scrollButton.addEventListener("click", (event) => {
+  scrollToBanner();
+})
+

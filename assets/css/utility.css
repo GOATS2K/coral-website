@@ -94,6 +94,13 @@
 	color: var(--color-bright);
 }
 
+.unstyled-button {
+	background: inherit;
+	border: inherit;
+	color: inherit;
+	cursor: pointer;
+}
+
 @media screen and (max-width: 770px) {
 	div .xl-icon {
 		font-size: 7em;
