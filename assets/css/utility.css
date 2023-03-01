@@ -1,0 +1,59 @@
+@import url("animations.css");
+
+.mb-1 {
+	margin-bottom: 1em;
+}
+
+.mb-2 {
+	margin-bottom: 2em;
+}
+
+.mb-3 {
+	margin-bottom: 3em;
+}
+
+.p-3 {
+  padding: 3em;
+}
+
+.space-evenly {
+	justify-content: space-evenly;
+}
+
+.col {
+	flex-direction: column;
+}
+
+.futuristic-font {
+	font-family: "Michroma", monospace;
+}
+
+.larger-icon {
+	align-self: center;
+	font-size: 4em;
+}
+
+.title {
+	font-size: 5em;
+	margin: 0;
+}
+
+.centered {
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+.shadow {
+	/* set position and z-index,
+	 otherwise the div below it will render
+	 on top of the shadow */
+	position: relative;
+	z-index: 10;
+	-webkit-box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
+	-moz-box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
+	box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
+}
+
+.highlight {
+	color: var(--color-bright);
+}

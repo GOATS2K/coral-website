@@ -1,10 +1,11 @@
 /* import normalize, for consistent styles across browsers */
 @import url("/assets/css/normalize.css");
 @import url("/assets/css/fonts.css");
-
+@import url("/assets//css/utility.css");
 
 :root {
 	--color-background: #3c3b3d;
+	--app-background: #1A1B1E;
 	--color-dark: #666467;
 	--color-light-1: #908d92;
 	--color-light-2: #b9b6bc;
@@ -13,9 +14,17 @@
 	--color-black: #121212;
 }
 
+.bg-app {
+	background-color: var(--app-background);
+}
+
+.bg-black {
+	background-color: var(--color-black);
+}
+
 video {
-	min-width: 50%;
-	min-height: 50%;
+	max-height: 75%;
+	max-width: 75%;
 }
 
 body {
@@ -30,6 +39,10 @@ p {
 	margin: auto;
 }
 
+img {
+	max-width: 100%;
+}
+
 .full-height {
 	height: 100dvh;
 	/* ensure padding is included in height calculation */
@@ -41,8 +54,17 @@ p {
 	padding: 3em;
 }
 
-.futuristic-font {
-	font-family: "Michroma", monospace;
+.container {
+	display: flex;
+	align-items: center;
+	padding: 7em;
+}
+
+@media screen and (max-width: 770px) {
+	div .container {
+		flex-direction: column;
+		gap: 1.5em;
+	}
 }
 
 .intro {
@@ -50,57 +72,7 @@ p {
 	flex-direction: column;
 }
 
-.larger-icon {
-	align-self: center;
-	font-size: 4em;
-}
-
-@keyframes bounce {
-	0% {
-		transform: translateY(0);
-	}
-
-	50% {
-		transform: translateY(-25px);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-
-.bounce-animation {
-	animation: 2s infinite ease bounce;
-}
-
-.title {
-	font-size: 5em;
-	margin: 0;
-}
-
-.shadow {
-	-webkit-box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
-	-moz-box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
-	box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
-}
-
-.why-coral {
-	position: relative;
-	z-index: 10;
-	padding: 3em;
-	background-color: var(--color-black);
-}
-
-.highlight {
-	color: var(--color-bright);
-}
-
 .point {
 	padding: 2em;
 	background-color: var(--color-background);
-}
-
-.centered {
-	text-align: center;
-	margin-bottom: 1em;
 }
