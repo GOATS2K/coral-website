@@ -79,6 +79,17 @@
 	margin-bottom: 1em;
 }
 
+.centered-items {
+	justify-content: center;
+	align-items: center;
+}
+
+.pipe {
+	height: 12rem;
+	width: 0.125rem;
+	background-color: rgb(155, 155, 155);
+}
+
 .shadow {
 	/* set position and z-index,
 	 otherwise the div below it will render
@@ -104,5 +115,9 @@
 @media screen and (max-width: 770px) {
 	div .xl-icon {
 		font-size: 7em;
+	}
+
+	div .pipe {
+		height: 7em;
 	}
 }
