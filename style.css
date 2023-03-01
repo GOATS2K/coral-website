@@ -1,30 +1,7 @@
 /* import normalize, for consistent styles across browsers */
 @import url("/assets/css/normalize.css");
 @import url("/assets/css/fonts.css");
-@import url("/assets//css/utility.css");
-
-:root {
-	--color-background: #3c3b3d;
-	--app-background: #1A1B1E;
-	--color-black: #161618;
-	--color-light-1: #908d92;
-	--color-light-2: #b9b6bc;
-	--color-text: #e3dfe7;
-	--color-bright: #ffffff;
-	--color-dark: #1f1f1f;
-}
-
-.bg-app {
-	background-color: var(--app-background);
-}
-
-.bg-black {
-	background-color: var(--color-black);
-}
-
-.bg-dark {
-	background-color: var(--color-dark);
-}
+@import url("/assets/css/utility.css");
 
 video {
 	max-height: 75%;
@@ -59,6 +36,13 @@ img {
 	padding: 3em;
 }
 
+.video-container {
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .container {
 	display: flex;
 	align-items: center;
@@ -67,15 +51,16 @@ img {
 	min-height: 30em;
 }
 
+.container:nth-of-type(odd) {
+	flex-direction: row-reverse;
+}
+
 @media screen and (max-width: 770px) {
-	div .container {
+	/* increase specificity to rank over nth-of-type */
+	div .container.container {
 		flex-direction: column;
 		gap: 1.5em;
-		padding: 2em;
-	}
-
-	div .sm-column-reverse {
-		flex-direction: column-reverse;
+		padding: 1.5em;
 	}
 }
 
