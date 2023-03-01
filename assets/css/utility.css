@@ -16,12 +16,44 @@
   padding: 3em;
 }
 
+.p-5 {
+	padding: 5em;
+}
+
+.p-7 {
+	padding: 7em;
+}
+
+.gap-1 {
+	gap: 1em;
+}
+
+.gap-2 {
+	gap: 2em;
+}
+
+.gap-3 {
+	gap: 3em;
+}
+
 .space-evenly {
 	justify-content: space-evenly;
 }
 
+.space-around {
+	justify-content: space-around;
+}
+
+.flex {
+	display: flex;
+}
+
 .col {
 	flex-direction: column;
+}
+
+.bolder {
+	font-weight: 900;
 }
 
 .futuristic-font {
@@ -31,6 +63,10 @@
 .large-icon {
 	align-self: center;
 	font-size: 4em;
+}
+
+.xl-icon {
+	font-size: 12em;
 }
 
 .title {
@@ -56,4 +92,10 @@
 
 .highlight {
 	color: var(--color-bright);
+}
+
+@media screen and (max-width: 770px) {
+	div .xl-icon {
+		font-size: 7em;
+	}
 }
