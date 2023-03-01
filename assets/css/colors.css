@@ -7,14 +7,16 @@
 	--color-dark: #1f1f1f;
 }
 
+/* the background tags are used,
+ they should override all other background colors */
 .bg-app {
-	background-color: var(--app-background);
+	background-color: var(--app-background) !important;
 }
 
 .bg-black {
-	background-color: var(--color-black);
+	background-color: var(--color-black) !important;
 }
 
 .bg-dark {
-	background-color: var(--color-dark);
+	background-color: var(--color-dark) !important;
 }

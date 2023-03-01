@@ -49,10 +49,14 @@ img {
 	padding: 7em;
 	box-sizing: border-box;
 	min-height: 30em;
+	gap: 3em;
+	justify-content: space-evenly;
+	background-color: var(--color-dark);
 }
 
 .container:nth-of-type(odd) {
 	flex-direction: row-reverse;
+	background-color: var(--color-black);
 }
 
 @media screen and (max-width: 770px) {
