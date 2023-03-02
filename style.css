@@ -1,30 +1,77 @@
-/*
-Replace this example stylesheet with your own.
-Please try to keep the code formatting nice.
+@import url("/assets/css/fonts.css");
+@import url("/assets/css/utility.css");
 
-We want to see a sensible mobile-first, responsive design.
-This means the default styles are for the smallest mobile size.
-*/
+video {
+	max-height: 75%;
+	max-width: 75%;
+}
 
-/* Multi-line rulesets must use whitespace for indentation consistently. */
 body {
-	/* note the indentation here */
-	background-color: #5bf;
-	color: #024;
+	background-color: var(--color-background);
+	color: var(--color-text);
+	font-family: "Fira Code", monospace;
 }
 
-/* One-liners are fine for very simple rulesets. */
-h1 { font-family: sans-serif;}
-
-/* 
-You will probably need at least two media queries to handle larger screens.
-Your queries should be configured to work with your content
-*/
-@media screen and (min-width: 457px) {
-	/* Code inside media queries should be indented one step further. */
-	body { font-size: 1.2em }
+p {
+	font-size: 1.25em;
+	max-width: 80ch;
+	margin: auto;
 }
-/*
-We don't want to see a min-width of 457px in your code
-This was chosen to match the template content.
-*/
+
+img {
+	/* prevent overflow on smaller viewports */
+	max-width: 100%;
+}
+
+.full-height {
+	height: 100dvh;
+	/* ensure padding is included in height calculation */
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 3em;
+}
+
+.video-container {
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	padding: 7em;
+	box-sizing: border-box;
+	min-height: 30em;
+	gap: 3em;
+	justify-content: space-evenly;
+	background-color: var(--color-dark);
+}
+
+.container:nth-of-type(odd) {
+	flex-direction: row-reverse;
+	background-color: var(--color-black);
+}
+
+@media screen and (max-width: 770px) {
+	/* increase specificity to rank over nth-of-type */
+	div .container.container {
+		flex-direction: column;
+		gap: 1.5em;
+		padding: 1.5em;
+	}
+}
+
+.intro {
+	display: flex;
+	flex-direction: column;
+}
+
+.point {
+	padding: 2em;
+	background-color: var(--color-background);
+}

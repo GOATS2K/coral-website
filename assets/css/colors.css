@@ -1,0 +1,22 @@
+:root {
+	--color-background: #3c3b3d;
+	--app-background: #1A1B1E;
+	--color-black: #161618;
+	--color-text: #e3dfe7;
+	--color-bright: #ffffff;
+	--color-dark: #1f1f1f;
+}
+
+/* the background tags are used,
+ they should override all other background colors */
+.bg-app {
+	background-color: var(--app-background) !important;
+}
+
+.bg-black {
+	background-color: var(--color-black) !important;
+}
+
+.bg-dark {
+	background-color: var(--color-dark) !important;
+}

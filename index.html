@@ -1,32 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Home - Coral</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-
-		<!--
-		You will need to replace this content with your own.
-
-		Your final site should have a maximum of four HTML documents.
-		Though a 'single page app' will probably have only one html file.
-		Either way, your site should provide the facility to navigate around the main sections.
-
-		Consider accessibility.
-		Make sure your HTML has a clear structure.
-		Use semantic elements to define the main parts of your page.
-
-		Remember to keep the indentation consistent and VALIDATE your code regularly!
-		-->
-
-		<h1>This is just a template</h1>
-		<p>
-			Remove this and replace it with your own, better content.
-		</p>
-
-		<script src="js/main.js"></script>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Coral</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- this loads the script after the body has loaded -->
+    <script defer src="js/main.js"></script>
+    <!-- tabler icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="landing">
+      <div class="full-height">
+        <div class="futuristic-font intro">
+          <h1 class="title">coral</h1>
+          <h3>a new take on a self-hosted music streaming platform</h3>
+        </div>
+        <video muted autoplay src="assets/videos/Coral.mp4"></video>
+        <h4 class="futuristic-font">learn more</h4>
+        <button id="scrollButton" class="unstyled-button bounce-animation">
+          <i class="ti ti-chevron-down large-icon"></i>
+        </button>
+      </div>
+      <div id="why-coral" class="bg-black p-3 shadow">
+        <h1 class="centered">yet another music streaming platform?</h1>
+        <p class="centered">
+          why should I choose Coral over Plex, Jellyfin or Navidrome?
+        </p>
+      </div>
+      <div>
+        <div id="multimedia-blocks">
+          <div class="bg-app video-container">
+            <h1 class="centered">a clean user interface</h1>
+            <video
+              class="shadow demo-video"
+              muted
+              autoplay
+              loop
+              src="assets/videos/demo.mp4"
+            ></video>
+          </div>
+          <div class="bg-app container">
+            <div>
+              <h1>created with discovery in mind</h1>
+              <p>"which tunes did this guy remix again?"</p>
+              <p>"did he collab with anyone?"</p>
+              <br />
+              <p>Coral will let you know just from reading your tags.</p>
+            </div>
+            <picture
+              ><img
+                class="shadow"
+                sizes="(max-width: 1227px) 100vw, 1227px"
+                srcset="
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_200.png   200w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_424.png   424w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_578.png   578w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_717.png   717w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_823.png   823w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_908.png   908w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_989.png   989w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_1060.png 1060w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_1137.png 1137w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_1208.png 1208w,
+                  /assets/images/artist/artist_gxbqt0_c_scale,w_1227.png 1227w
+                "
+                src="/assets/images/artist/artist_gxbqt0_c_scale,w_1227.png"
+                alt="Screenshot of Artist page, featuring Alix Perez"
+            /></picture>
+          </div>
+        </div>
+        <div id="point-blocks">
+          <div class="container">
+            <div><i class="ti ti-network-off xl-icon"></i></div>
+            <div>
+              <h1 class="highlight centered">offline by default</h1>
+              <p>
+                as a user of self-hosted software, you probably want to know
+                where your data is going. with Coral, you
+                <i><b>opt-in</b></i> to integrations with third-party services,
+                <i><b>allowing you to stay in control</b></i> of where your data
+                goes.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div><i class="ti ti-users xl-icon"></i></div>
+            <div>
+              <h1 class="highlight centered">stay in the loop</h1>
+              <p>
+                <b
+                  >through optional integrations with platforms such as Spotify,
+                  Soundcloud and Bandcamp</b
+                >, Coral can let you know what your favorite artist is up to,
+                allowing you to keep up to date with their latest community
+                interactions and releases.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div><i class="ti ti-album xl-icon"></i></div>
+            <div>
+              <h1 class="highlight centered">your collection, your rules</h1>
+              <p>
+                have you tagged your music in a specific way? are you fed up
+                with music players changing your metadata?
+                <b>Coral will cater to you</b>.
+              </p>
+              <br />
+              <p>
+                if you're the type of person to search for record labels and
+                catalog numbers, Coral will allow you to do so with blazing
+                speeds.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div class="flex centered-row gap-1">
+              <i class="ti ti-device-desktop xl-icon"></i>
+              <div class="pipe"></div>
+              <i class="ti ti-server xl-icon"></i>
+            </div>
+            <div>
+              <h1 class="highlight centered">run as standalone or as server</h1>
+              <p>
+                replace your existing music player with Coral in standalone mode
+                or enable Coral's server and access your music collection from
+                anywhere.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div><i class="ti ti-world-upload xl-icon"></i></div>
+            <div>
+              <h1 class="highlight centered">
+                easily update your collection from any device
+              </h1>
+              <p>
+                are you running Coral in client mode and gotten some new music?
+              </p>
+              <br />
+              <p>
+                let Coral upload it to the server and automatically make the
+                tunes accessible on all your devices!
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div><i class="ti ti-train xl-icon"></i></div>
+            <div>
+              <h1 class="highlight centered">optimized for poor connections</h1>
+              <p>
+                are you somewhere remote with a low speed, high latency
+                connection? don’t worry, Coral will ensure that you’ll still be
+                able to listen your music by transcoding to AAC using the best
+                possible encoder it can use, and pre-caching as much as it can
+                while your connection improves.
+              </p>
+            </div>
+          </div>
+          <div class="container">
+            <div><i class="ti ti-code xl-icon"></i></div>
+            <div>
+              <h1 class="highlight centered">it's extensible</h1>
+              <p>
+                are there any features or integrations you’d like to see in
+                Coral? Do you know C# and TypeScript? contribute on GitHub or
+                write a custom plugin!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
