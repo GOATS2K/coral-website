@@ -1,10 +1,31 @@
 @import url("/assets/css/fonts.css");
 @import url("/assets/css/utility.css");
 
-video {
-	max-height: 75%;
-	max-width: 75%;
+html {
+  box-sizing: border-box;
 }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+video {
+	max-height: 85%;
+	max-width: 85%;
+}
+
+a {
+	color: var(--color-highlight);
+	font-weight: 900;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
 
 body {
 	background-color: var(--color-background);
@@ -13,9 +34,17 @@ body {
 }
 
 p {
-	font-size: 1.25em;
 	max-width: 80ch;
-	margin: auto;
+	line-height: 1.50em;
+	font-size: 1.15em;
+}
+
+ul {
+	font-size: 1.15em;
+}
+
+li {
+	margin-bottom: 0.75em;
 }
 
 img {
@@ -23,10 +52,21 @@ img {
 	max-width: 100%;
 }
 
+.article {
+	padding: 2em;
+	margin: auto;
+	max-width: 80ch;
+}
+
+.text-block {
+	font-family: 'Courier New', Courier, monospace;
+	background: rgb(255, 255, 255, 0.1);
+	padding: 0.15em;
+	color: rgb(252, 252, 252);
+}
+
 .full-height {
 	height: 100dvh;
-	/* ensure padding is included in height calculation */
-	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -45,7 +85,6 @@ img {
 	display: flex;
 	align-items: center;
 	padding: 7em;
-	box-sizing: border-box;
 	min-height: 30em;
 	gap: 3em;
 	justify-content: space-evenly;

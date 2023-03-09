@@ -1,6 +1,10 @@
 @import url("animations.css");
 @import url("colors.css");
 
+.m-auto {
+	margin: auto;
+}
+
 .mb-1 {
 	margin-bottom: 1em;
 }
