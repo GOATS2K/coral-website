@@ -30,7 +30,7 @@ a:hover {
 body {
 	background-color: var(--color-background);
 	color: var(--color-text);
-	font-family: "Fira Code", monospace;
+	font-family: 'Fira Sans', sans-serif;
 }
 
 p {
@@ -52,20 +52,25 @@ img {
 	max-width: 100%;
 }
 
-.toc > ul {
+.toc-list {
 	list-style: square;
 	padding-inline-start: 1.5em;
 }
 
-.toc > ul > li {
-	margin-bottom: 0.2em;
+.toc-list-item {
+	margin-block: 0.2em;
+}
+
+/* nested lists */
+.toc-list-item > ul {
+	font-size: 1em;
+	list-style: circle;
 }
 
 .article {
 	padding: 2em;
 	margin: auto;
 	max-width: 80ch;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
 
 .text-block {
