@@ -10,6 +10,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
     />
+    <!-- this loads the script after the body has loaded -->
+    <script defer src="js/main.js"></script>
   </head>
   <body>
     <div class="article">
@@ -18,6 +20,9 @@
         <time datetime="2023-03-09">March 9th, 2023</time> · Written by John
         Patrick Glattetre
       </h4>
+      <div class="toc">
+        <h2>Table of contents</h2>
+      </div>
       <p>
         Here's an article explaining why I decided to make Coral. It's no small
         undertaking to build music player from scratch - and there's so many out
@@ -68,10 +73,95 @@
       <div class="article-section">
         <h2>Huh? Just use Plex or something</h2>
         <p>
-          I tried using both Plex and Jellyfin as music players for a bit and I
-          didn't really like the experience that much, here's why.
+          It's a common opinion that the self-hosted music streaming platform
+          space is a "solved problem", but I disagree. There are tons of things
+          that can be improved upon. I tried using both Plex and Jellyfin as
+          music players for a bit and I didn't really like the experience that
+          much, here's why. I could also argue that even the specialized
+          platforms such as Navidrome or Subsonic also struggle with many
+          similar problems.
         </p>
-        <h3>The search experience</h3>
+        <h3>I want to keep up to date with my favorite artists and labels</h3>
+        <p>
+          The thing that Spotify and other commercial streaming platform can
+          provide is the ability to keep up-to-date with your favorite artist's
+          discography and know when they've got new music out. I buy tons of
+          music on Bandcamp, but I tend to miss emails about music being
+          released, so I'd like to have some sort of notification in the player
+          that I'm using that there's new music to be heard. I tend to miss out
+          on newer releases because of this and I end up having to play
+          catch-up.
+        </p>
+        <h3>I want to use my audio transcoder of choice</h3>
+        <p>
+          I want to be able to listen to my music the way it's meant to be heard
+          on even poor connections. Even if I can't stream it losslessly, I
+          would like to use the best AAC encoder (Apple's encoder on
+          MacOS/Windows and Fraunhofer's on Linux) I can use to ensure that the
+          music still sounds good at a low (less than 160kbps) bitrate.
+        </p>
+        <p>
+          You might be wondering, why not Opus? I'd love to use Opus, but it's
+          not exactly most web-friendly codec due to a lack of support for it in
+          certain browsers. I wrote about this in my literature review,
+          researching the feasiblity of Coral,
+          <a href="/assets/documents/coral_first_deliverable.pdf"
+            >which you can read</a
+          >
+          if you're interested in knowing some of the design decisions I made
+          while making Coral.
+        </p>
+        <p>
+          <i
+            >Note that Coral as an application has changed a lot since I wrote
+            the document, but the research is still relevant.</i
+          >
+        </p>
+        <p>
+          It's important that playback is instant, and the audio is seekable
+          from the moment playback has started, even if the audio is being
+          transcoded. If you're able to implement Opus support in Coral with
+          these constraints in mind
+          <a href="mailto:jp@nectarine.sh">I'd love to hear from you</a>.
+        </p>
+        <h3>I'm not a fan of their user interfaces</h3>
+        <p>
+          I want the user interface to be functional, with commonly used
+          features placed in a way that doesn't require me to dive through tons
+          of menus to do what I need to. I also want the user interface to be
+          aesthetically pleasing, feel performant and have some sort of identity
+          that's not just flat icons on bland backgrounds. I'm also tired seeing
+          of low quality Spotify knock-offs. There are certain things Spotify
+          does well, but they're awful at a lot of things.
+        </p>
+        <h3>The mobile apps aren't great</h3>
+        <p>
+          I tried Plexamp on my phone but it couldn't find my server for some
+          reason. The Jellyfin Android app isn't amazing either, there are
+          third-party apps such as
+          <a href="https://github.com/jmshrv/finamp">Finamp</a>,
+          <a href="https://symfonium.app/">Symfonium</a>,
+          <a href="https://github.com/timusus/Shuttle2/">Shuttle2</a> and
+          <a href="https://github.com/leinelissen/jellyfin-audio-player"
+            >Fintunes</a
+          >
+          that offer an improved experience over the main Jellyfin app. I tried
+          out Fintunes for a bit and ended up deleting it after finding that it
+          lacked simple features such as being able to go to the artist of the
+          currently playing track and playlist browsing. Not to mention the
+          countless other apps that have support for the ancient Subsonic
+          protocol - that are also either outdated or ugly.
+        </p>
+        <h3>I want a replacement for my desktop player</h3>
+        <p>
+          I'm kinda over foobar2000. Don't get me wrong - I've been using it for
+          over 8 years now and I don't have anything against it, but I want
+          something new that doesn't require me to transfer my music everywhere.
+          I want a single server that all my devices can connect to and manage.
+          I want to be able to upload new music to my server from any of my
+          devices.
+        </p>
+        <h3>The search experience ain't it</h3>
         <p>
           In my current music player, I can search for a song based on every
           single tag it has as well as the name of the folder it is in. Most
@@ -140,38 +230,6 @@
           certain degree, I won't be supporting all the intricacies surrounding
           classical music).
         </p>
-        <h3>I want to use my audio encoder of choice</h3>
-        <p>
-          I want to be able to listen to my music the way it's meant to be heard
-          on even poor connections. Even if I can't stream it losslessly, I
-          would like to use the best AAC encoder (Apple's encoder on
-          MacOS/Windows and Fraunhofer's on Linux) I can use to ensure that the
-          music still sounds good at a low (less than 160kbps) bitrate.
-        </p>
-        <p>
-          You might be wondering, why not Opus? I'd love to use Opus, but it's
-          not exactly most web-friendly codec due to a lack of support for it in
-          certain browsers. I wrote about this in my literature review,
-          researching the feasiblity of Coral,
-          <a href="/assets/documents/coral_first_deliverable.pdf"
-            >which you can read</a
-          >
-          if you're interested in knowing some of the design decisions I made
-          while making Coral.
-        </p>
-        <p>
-          <i
-            >Note that Coral as an application has changed a lot since I wrote
-            the document, but the research is still relevant.</i
-          >
-        </p>
-        <p>
-          It's important that playback is instant, and the audio is seekable
-          from the moment playback has started, even if the audio is being
-          transcoded. If you're able to implement Opus support in Coral with
-          these constraints in mind
-          <a href="mailto:jp@nectarine.sh">I'd love to hear from you</a>.
-        </p>
         <h3>Poor user experience</h3>
         <p>
           I dislike how Plex shows off my music collection. It uses data from
@@ -202,51 +260,48 @@
           also show you your external playlists - but it doesn't make their
           contents within them playable, which kinda defeats their purpose.
         </p>
-        <h3>I'm not a fan of their user interfaces</h3>
+        <h3>I'm picky!</h3>
         <p>
-          I want the user interface to be functional, with commonly used
-          features placed in a way that doesn't require me to dive through tons
-          of menus to do what I need to. I also want the user interface to be
-          aesthetically pleasing, feel performant and have some sort of identity
-          that's not just flat icons on bland backgrounds. I'm also tired seeing
-          of low quality Spotify knock-offs. There are certain things Spotify
-          does well, but they're awful at a lot of things.
-        </p>
-        <h3>The mobile apps aren't great</h3>
-        <p>
-          I tried Plexamp on my phone but it couldn't find my server for some
-          reason. The Jellyfin Android app isn't amazing either, there are
-          third-party apps such as
-          <a href="https://github.com/jmshrv/finamp">Finamp</a>,
-          <a href="https://symfonium.app/">Symfonium</a>,
-          <a href="https://github.com/timusus/Shuttle2/">Shuttle2</a> and
-          <a href="https://github.com/leinelissen/jellyfin-audio-player"
-            >Fintunes</a
-          >
-          that offer an improved experience over the main Jellyfin app. I tried
-          out Fintunes for a bit and ended up deleting it after finding that it
-          lacked simple features such as being able to go to the artist of the
-          currently playing track and playlist browsing. Not to mention the
-          countless other apps that have support for the ancient Subsonic
-          protocol - that are also either outdated or ugly.
-        </p>
-        <h3>I want a replacement for my desktop player</h3>
-        <p>
-          I'm kinda over foobar2000. Don't get me wrong - I've been using it for
-          over 8 years now and I don't have anything against it, but I want
-          something new that doesn't require me to transfer my music everywhere.
-          I want a single server that all my devices can connect to and manage.
-          I want to be able to upload new music to my server from any of my
-          devices.
+          Which is why I am taking matters into my own hands to provide what I
+          believe will be a superior experience. I will be fixing every issue
+          I've faced using Plex and Jellyfin as music players. I briefly tried
+          Navidrome's demo instance and I've also used Subsonic in the past - so
+          I know that I'll have to make my own music player to get things just
+          the way I want them to.
         </p>
       </div>
       <div class="article-section">
-        <h2>You're picky!</h2>
+        <h2>Current state of Coral</h2>
         <p>
-          You're damn right I'm picky. That's also why I am taking matters into
-          my own hands to provide an experience that no one else can match. I
-          will be fixing every issue I've faced using Plex and Jellyfin as my
-          primary music players.
+          As of writing this article, a few months prior to open sourcing Coral,
+          it's already solid enough for me to daily drive - but there still is a
+          lot to do before I end up open sourcing the application. I've
+          prioritized the music discovery experience and UI over user-friendly
+          deployment, as I'm still its only user. I'm sure that by the time you
+          read this article, Coral will be a more mature platform and that
+          you'll be able to be up and running within a few minutes.
+        </p>
+      </div>
+      <div class="article-section">
+        <h2>Notes about the future</h2>
+        <p>
+          I was introduced to the React Native framework
+          <a href="https://tamagui.dev/">tamagui</a> by a friend of mine. It
+          both looks a lot prettier than what I'm using today, and it also
+          includes a React Native toolkit which allows me to share code between
+          the web and Native codebase. I'm going to be prioritizing other
+          features such as playlists and plugin integrations for now, but I'm
+          excited to port the app to Tamagui and make a fun mobile app for Coral
+          with it.
+        </p>
+        <h3>It's not just a university project</h3>
+        <p>
+          Coral's development will keep going for a long time as it's a platform
+          that I'm heavily invested in myself. Coral will be receiving updates
+          for as long as I'm able to use it, so you can feel safe knowing that
+          the platform will be actively looked after by someone with a lot of
+          passion for it. I won't let it die like my other projects and
+          <b>that's a promise</b>.
         </p>
       </div>
     </div>
