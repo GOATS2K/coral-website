@@ -51,20 +51,22 @@ const parseSectionMap = (sectionMap) => {
   mainHeadingLink.href = `#${sectionMap.id}`;
   listItem.appendChild(mainHeadingLink);
 
-  for (const subHeading of sectionMap.subHeadings) {
+  if (sectionMap.subHeadings.length > 0) {
     let childList = document.createElement("ul");
     childList.className = "toc-list";
 
-    let childItem = document.createElement("li");
-    childItem.className = "toc-list-item";
+    for (const subHeading of sectionMap.subHeadings) {
+      let childItem = document.createElement("li");
+      childItem.className = "toc-list-item";
 
-    let link = document.createElement("a");
-    link.innerText = subHeading.title;
-    link.href = `#${subHeading.id}`;
+      let link = document.createElement("a");
+      link.innerText = subHeading.title;
+      link.href = `#${subHeading.id}`;
 
-    childItem.appendChild(link);
-    childList.appendChild(childItem);
-    listItem.appendChild(childList);
+      childItem.appendChild(link);
+      childList.appendChild(childItem);
+      listItem.appendChild(childList);
+    }
   }
 
   return listItem;
