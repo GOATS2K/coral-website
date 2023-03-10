@@ -53,13 +53,12 @@ img {
 }
 
 .toc > ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+	list-style: square;
+	padding-inline-start: 1.5em;
 }
 
 .toc > ul > li {
-	margin-bottom: 0.1em;
+	margin-bottom: 0.2em;
 }
 
 .article {
