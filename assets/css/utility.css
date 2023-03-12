@@ -127,3 +127,10 @@
 		height: 7em;
 	}
 }
+
+.text-block {
+	font-family: 'Courier New', Courier, monospace;
+	background: rgb(255, 255, 255, 0.1);
+	padding: 0.15em;
+	color: rgb(252, 252, 252);
+}

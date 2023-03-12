@@ -52,6 +52,11 @@ img {
 	max-width: 100%;
 }
 
+figure {
+	margin: 0;
+	padding: 0;
+}
+
 .toc-list {
 	list-style: square;
 	padding-inline-start: 1.5em;
@@ -73,11 +78,10 @@ img {
 	max-width: 80ch;
 }
 
-.text-block {
-	font-family: 'Courier New', Courier, monospace;
-	background: rgb(255, 255, 255, 0.1);
-	padding: 0.15em;
-	color: rgb(252, 252, 252);
+.article-image {
+	text-align: center;
+	color: var(--color-caption);
+	margin-bottom: 1.5em;
 }
 
 .full-height {
