@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story - Coral</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- tabler icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
+    <!-- this loads the script after the body has loaded -->
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="article">
+      <h1 class="futuristic-font">The Story Behind Coral</h1>
+      <h4>
+        <time datetime="2023-03-09">March 9th, 2023</time> · Written by John
+        Patrick Glattetre
+      </h4>
+      <div class="toc">
+        <h2>Table of contents</h2>
+      </div>
+      <p>
+        This is an article explaining why I decided to make Coral. It's no small
+        undertaking to build music player from scratch - and there's so many out
+        there, so why build a new one? Well, for one it's something I've always
+        wanted to do, but never had the time to, until now.
+      </p>
+      <div class="article-section">
+        <h2>How I used to listen to music before Coral</h2>
+        <p>
+          I've got a sizable music collection that I bring with me everywhere I
+          go. To be able to do so, I maintain a separate transcoded music
+          library that is synced to my phone and laptop. When I get new music, I
+          right-click the album in foobar2000, choose my AAC preset and wait a
+          few seconds for it to complete before it's then mirrored via
+          Syncthing. I initially wanted to write an application that could
+          transcode parts of my collection on demand as I very often forget to
+          create transcodes of the music I get.
+        </p>
+        <p>
+          If only you knew the amount of times I've logged into my computer via
+          my phone and done the whole procedure on public transport over a
+          sketchy LTE connection. It's an awful experience that I hope I won't
+          need to do again.
+        </p>
+      </div>
+      <div class="article-section">
+        <h2>An opportunity presents itself</h2>
+        <p>
+          In the autumn of 2022, I started my final year at university. The
+          Computer Science BSc course has students do a year long development
+          project, along with many other modules, like the one I'm writing this
+          website for
+          <i><b>hello Graeme!</b></i
+          >.
+        </p>
+        <p>
+          You can essentially make whatever you want for your development
+          project, granted that you're able to plan it out and have something to
+          show by the end of the year. I spoke with my supervisor about what I
+          could do for my project, which essentially boiled down to "make
+          whatever you want, granted that you haven't made it before", and thus,
+          Coral was born.
+        </p>
+        <p>
+          I initially wanted to make a simple audio transcoder frontend that I
+          could trigger remotely, but that would be too simple, so I decided to
+          make a streaming platform instead. I wanted to spend some time
+          learning React anyway.
+        </p>
+      </div>
+      <div class="article-section">
+        <h2>"Just use Plex or something"</h2>
+        <p>
+          It's a common opinion that the self-hosted music streaming platform
+          space is a "solved problem", but I disagree. There are tons of things
+          that can be improved upon. I tried using both Plex and Jellyfin as
+          music players for a bit and I didn't really like the experience that
+          much. I wanted to like the more specialized streaming platforms, like
+          Navidrome, Ampache and Subsonic, but I dislike the way they look and
+          behave.
+        </p>
+        <h3>I want to keep up to date with my favorite artists and labels</h3>
+        <p>
+          The thing that Spotify and other commercial streaming platform can
+          provide is the ability to keep up-to-date with your favorite artist's
+          discography and know when they've got new music out. I buy a lot of
+          music on Bandcamp, but I tend to miss emails about music being
+          released, so I'd like to have some sort of notification in the player
+          that I'm using to let me know that there's new music to be heard. I
+          tend to miss out on newer releases because of this and I end up having
+          to play catch-up.
+        </p>
+        <h3>I want to use my audio transcoder of choice</h3>
+        <p>
+          I want to be able to listen to my music the way it's meant to be heard
+          on even poor connections. Even if I can't stream it losslessly, I
+          would like to use the best AAC encoder (Apple's encoder on
+          MacOS/Windows and Fraunhofer's on Linux) I can use to ensure that the
+          music still sounds good at a low (less than 160kbps) bitrate.
+        </p>
+        <p>
+          You might be wondering, why not Opus? I'd love to use Opus, but it's
+          not exactly most web-friendly codec due to a lack of support for it in
+          certain browsers. I wrote about this in my literature review,
+          researching the feasiblity of Coral,
+          <a href="/assets/documents/coral_first_deliverable.pdf"
+            >which you can read</a
+          >
+          if you're interested in knowing some of the design decisions I made
+          while making Coral.
+        </p>
+        <p>
+          <i
+            >Note that Coral as an application has changed a lot since I wrote
+            the document, but the research is still relevant.</i
+          >
+        </p>
+        <p>
+          It's important that playback is instant, and the audio is seekable
+          from the moment playback has started, even if the audio is being
+          transcoded. If you're able to implement Opus support in Coral with
+          these constraints in mind
+          <a href="mailto:jp@nectarine.sh">I'd love to hear from you</a>.
+        </p>
+        <h3>I want a replacement for my desktop player</h3>
+        <p>
+          I'm kinda over foobar2000. Don't get me wrong - I've been using it for
+          over 8 years now and I don't have anything against it, but I want
+          something new that doesn't require me to transfer my music everywhere.
+          I want a single server that all my devices can connect to and manage.
+          I want to be able to upload new music to my server from any of my
+          devices.
+        </p>
+        <h3>I'm not a fan of their user interfaces</h3>
+        <p>
+          I want the user interface to be functional, with commonly used
+          features placed in a way that doesn't require me to dive through tons
+          of menus to do what I need to. I also want the user interface to be
+          aesthetically pleasing, feel performant and have some sort of identity
+          that's not just flat icons on bland backgrounds. I'm also tired seeing
+          of low quality Spotify knock-offs. Spotify's user interface does some
+          things right, but are awful at most.
+        </p>
+        <h3>The mobile apps aren't great</h3>
+        <p>
+          I tried Plexamp on my phone but it couldn't find my server for some
+          reason. The Jellyfin Android app isn't amazing either, there are
+          third-party apps such as
+          <a href="https://github.com/jmshrv/finamp">Finamp</a>,
+          <a href="https://symfonium.app/">Symfonium</a>,
+          <a href="https://github.com/timusus/Shuttle2/">Shuttle2</a> and
+          <a href="https://github.com/leinelissen/jellyfin-audio-player"
+            >Fintunes</a
+          >
+          that offer an improved experience over the main Jellyfin app. I tried
+          out Fintunes for a bit and ended up deleting it after finding that it
+          lacked simple features such as being able to go to the artist of the
+          currently playing track and playlist browsing. Not to mention the
+          countless other apps that have support for the ancient Subsonic
+          protocol - that are also either outdated or not as aesthetically
+          pleasing as I'd want them to be.
+        </p>
+        <p>
+          One could argue that a music player doesn't have to be the prettiest
+          thing to look at, after all, once you've found the song you want to
+          listen to, you go back to do whatever else you were doing. However, a
+          pretty user interface can make you <i>want</i> to listen to music,
+          want to interact with and explore more of what the application can do
+          - and that's what I care about. There are also people who don't use
+          certain applications unless they're visually pleasing.
+        </p>
+        <h3>The search experience leaves a lot to be desired</h3>
+        <p>
+          In my current music player, I can search for a song based on every
+          single tag it has as well as the name of the folder it is in. Most
+          times I tend to include the catalog number of the release in its
+          folder name, which makes it very easy to find music from certain
+          labels. Here are some examples.
+        </p>
+        <ul>
+          <li><span class="text-block">NQ</span> for The North Quarter</li>
+          <li><span class="text-block">SHA</span> for Shogun Audio</li>
+          <li><span class="text-block">CRIT</span> for Critical Music</li>
+        </ul>
+        <p>
+          You get the idea. I can't search like this in Plex nor in Jellyfin. I
+          try to include as much metadata as I need for discovery in my music
+          collection. I make extensive use of custom tags such as
+          <span class="text-block">CATALOGNUMBER</span>,
+          <span class="text-block">LABEL</span> and
+          <span class="text-block">ISRC</span> to help aid discovery based on
+          which country the music was released in. Take a look at the
+          <a
+            href="https://www.ifpi.org/wp-content/uploads/2021/02/ISRC_Handbook.pdf"
+            >ISRC standard</a
+          >
+          if you're interested.
+        </p>
+        <h4>Poor presentation of results</h4>
+        <p>
+          I don't want to scroll through a carousel of tracks to find the one I
+          want to listen to. Spotify solves this problem by giving you the first
+          100 matches to the query and then creating artists and album results
+          based on the metadata present on the tracks.
+        </p>
+        <div class="article-image">
+          <figure>
+            <img
+              src="/assets/images/article/story/sorrow_search.png"
+              alt="Jellyfin search results for Sorrow"
+            />
+            <figcaption>
+              Searching Jellyfin: I wish I could see most of the tracks I have
+              by Sorrow.
+            </figcaption>
+          </figure>
+        </div>
+        <p>
+          Notice the lack of grouping of artists in this query. These grouped
+          artist should be split into Vacant, Sorrow, Asa and Trim. The next
+          section goes in-depth about why.
+        </p>
+        <h4>Poor display of artists and their roles on various tracks</h4>
+        <p>
+          Commercial streaming platforms allow you to discover an artist's
+          discography through more than just their main releases. Spotify's
+          "Appears In" section includes releases where the artist either
+          features as guest, contributor to a compilation or in certain cases
+          remixed a track. However, their presentation of said information can
+          be improved upon.
+        </p>
+        <p>
+          You'll often find that artists names are repeated twice on a track,
+          both as <span class="text-block">title (feat. guest_artist)</span> in
+          the title tag as well as
+          <span class="text-block">artist, guest_artist</span> in the artist
+          tag. Most people don't care, but I think it's hideous.
+        </p>
+        <div class="article-image">
+          <figure>
+            <img
+              src="/assets/images/article/story/spotify_duplicate_artist.png"
+              alt="How Spotify duplicates artists in certain cases"
+            />
+          </figure>
+          <figcaption>
+            Notice how Spotify duplicates the artist tag to make them
+            discoverable on the artist's "Appears In" section.
+          </figcaption>
+        </div>
+        <div class="article-image">
+          <figure>
+            <img
+              src="/assets/images/article/story/spotify_duplicate_artist_2.png"
+              alt="Inconsistencies with how artists are presented in Spotify"
+            />
+          </figure>
+          <figcaption>They aren't consistent about it either.</figcaption>
+        </div>
+        <p>
+          In Coral, I show the title tag as is, but allow users to click on the
+          artist name within the title if it can be parsed. Plex and Jellyfin do
+          not process your tags in any way, so you end up with tons of duplicate
+          artists where they've done collaborations with other people -
+          <b>as seen previously</b>. Plex doesn't present your metadata as-is by
+          default, which is annoying.
+        </p>
+        <p>
+          I want users to be able re-discover their music collection without
+          needing to result to searching for things. You should be able to click
+          on an artist and know exactly what they did on what tracks (to a
+          certain degree, I won't be supporting all the intricacies surrounding
+          classical music).
+        </p>
+        <h3>Poor user experience</h3>
+        <p>
+          I dislike how Plex shows off my music collection. It uses data from
+          MusicBrainz to change the names and tags of your audio. I want my data
+          to be presented in the way that's stored, not how some third party
+          service wants things to look. It's also extra annoying when the
+          metadata matches are totally incorrect.
+        </p>
+        <div class="article-image">
+          <figure>
+            <img src="/assets/images/article/story/in_the_mood.png" />
+            <figcaption>Something's not right here...</figcaption>
+          </figure>
+        </div>
+        <p>
+          These all-in-one multimedia platforms excel at presenting videos, but
+          leave a lot to be desired when it comes to music collections. Plex
+          allows you to perform complex search queries on metadata acquired by
+          them via third-party integrations with MusicBrainz and Last.fm, but
+          you cannot perform any queries against your own metadata beyond
+          standard tags.
+        </p>
+        <p>
+          It's also impossible for me to find playlists I've created in Plex
+          without diving through tons of different menus, nor can I mark tracks,
+          artists or albums as favorites, making it harder than necessary to
+          find the music that I love. It's possible to create what Plex calls
+          "collections", but they're only accessible through a sub-menu on the
+          main music page.
+        </p>
+        <p>
+          Jellyfin allows you to both create and find your playlists. It can
+          also show you your external playlists - but it doesn't make their
+          contents within them playable, which kinda defeats their purpose.
+        </p>
+        <h3>I'm picky!</h3>
+        <p>
+          Which is why I am taking matters into my own hands to provide what I
+          believe will be a superior experience. I will be fixing every issue
+          I've faced using Plex and Jellyfin as music players. I briefly tried
+          Navidrome's demo instance and I've also used Subsonic in the past - so
+          I know that I'll have to make my own music player to get things just
+          the way I want them to.
+        </p>
+      </div>
+      <div class="article-section">
+        <h2>Current state of Coral</h2>
+        <p>
+          As of writing this article, a few months prior to open sourcing Coral,
+          it's already solid enough for me to daily drive - but there still is a
+          lot to do before I end up open sourcing the application. I've
+          prioritized the music discovery experience and UI over user-friendly
+          deployment, as I'm still its only user. I'm sure that by the time you
+          read this article, Coral will be a more mature platform and that
+          you'll be able to be up and running within a few minutes.
+        </p>
+      </div>
+      <div class="article-section">
+        <h2>Notes about the future</h2>
+        <p>
+          I was introduced to the React Native framework
+          <a href="https://tamagui.dev/">tamagui</a> by a friend of mine. It
+          both looks a lot prettier than what I'm using today, and it also
+          includes a React Native toolkit which allows me to share code between
+          the web and Native codebase. I'm going to be prioritizing other
+          features such as playlists and plugin integrations for now, but I'm
+          excited to port the app to Tamagui and make a fun mobile app for Coral
+          with it.
+        </p>
+        <h3>It's not just a university project</h3>
+        <p>
+          Coral's development will keep going for a long time as it's a platform
+          that I'm heavily invested in myself. Coral will be receiving updates
+          for as long as I'm able to use it, so you can feel safe knowing that
+          the platform will be actively looked after by someone with a lot of
+          passion for it. I won't let it die like my other projects and
+          <b>that's a promise</b>.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

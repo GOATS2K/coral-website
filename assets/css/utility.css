@@ -1,6 +1,10 @@
 @import url("animations.css");
 @import url("colors.css");
 
+.m-auto {
+	margin: auto;
+}
+
 .mb-1 {
 	margin-bottom: 1em;
 }
@@ -122,4 +126,11 @@
 	div .pipe {
 		height: 7em;
 	}
+}
+
+.text-block {
+	font-family: 'Courier New', Courier, monospace;
+	background: rgb(255, 255, 255, 0.1);
+	padding: 0.15em;
+	color: rgb(252, 252, 252);
 }
