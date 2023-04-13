@@ -112,6 +112,20 @@ figure {
 	background-color: var(--color-dark);
 }
 
+.h-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3em;
+	min-height: 18em;
+	justify-content: space-evenly;
+	background-color: var(--color-dark);
+}
+
+.h-container:nth-of-type(odd) {
+	background-color: var(--color-black);
+}
+
 .container:nth-of-type(odd) {
 	flex-direction: row-reverse;
 	background-color: var(--color-black);
@@ -124,14 +138,64 @@ figure {
 		gap: 1.5em;
 		padding: 1.5em;
 	}
+
+	.downloads {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		padding: 2em;
+	}
 }
 
-.intro {
+.page-wrapper {
+	padding: 2em;
+}
+
+.downloads {
+	display: flex;
+	gap: 4em;
+	padding: 2em;
+}
+
+.download-option {
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	gap: 0.5em;
 }
 
-.point {
-	padding: 2em;
-	background-color: var(--color-background);
+.download-links {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
+
+.download-button::before {
+	/* https://tabler-icons.io/i/download */
+	content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJpY29uIGljb24tdGFibGVyIGljb24tdGFibGVyLWRvd25sb2FkIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4NCiAgIDxwYXRoIHN0cm9rZT0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSI+PC9wYXRoPg0KICAgPHBhdGggZD0iTTQgMTd2MmEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyIC0ydi0yIj48L3BhdGg+DQogICA8cGF0aCBkPSJNNyAxMWw1IDVsNSAtNSI+PC9wYXRoPg0KICAgPHBhdGggZD0iTTEyIDRsMCAxMiI+PC9wYXRoPg0KPC9zdmc+');
+}
+
+.download-button:hover {
+	background-color: var(--color-alt-highlight);
+}
+
+.download-button {
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+	
+	font-family: inherit;
+	
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+
+	background-color: var(--color-highlight);
+	color: black;
+	
+	cursor: pointer;
+	
+	/* border-radius greater than height gives pill shape */
+	border-radius: 100px;
 }

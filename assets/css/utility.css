@@ -17,6 +17,14 @@
 	margin-bottom: 3em;
 }
 
+.p-1 {
+  padding: 1em;
+}
+
+.p-2 {
+  padding: 2em;
+}
+
 .p-3 {
   padding: 3em;
 }
@@ -65,9 +73,13 @@
 	font-family: "Michroma", monospace;
 }
 
-.large-icon {
+.small-icon {
 	align-self: center;
 	font-size: 4em;
+}
+
+.large-icon {
+	font-size: 8em;
 }
 
 .xl-icon {
@@ -79,9 +91,12 @@
 	margin: 0;
 }
 
+.small-title {
+	font-size: 3em;
+}
+
 .centered {
 	text-align: center;
-	margin-bottom: 1em;
 }
 
 .centered-items {
