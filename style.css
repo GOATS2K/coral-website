@@ -153,7 +153,7 @@ figure {
 
 .downloads {
 	display: flex;
-	gap: 4em;
+	gap: 2em;
 	padding: 2em;
 }
 
@@ -171,8 +171,9 @@ figure {
 }
 
 .download-button::before {
-	/* https://tabler-icons.io/i/download */
-	content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGNsYXNzPSJpY29uIGljb24tdGFibGVyIGljb24tdGFibGVyLWRvd25sb2FkIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIj4NCiAgIDxwYXRoIHN0cm9rZT0ibm9uZSIgZD0iTTAgMGgyNHYyNEgweiIgZmlsbD0ibm9uZSI+PC9wYXRoPg0KICAgPHBhdGggZD0iTTQgMTd2MmEyIDIgMCAwIDAgMiAyaDEyYTIgMiAwIDAgMCAyIC0ydi0yIj48L3BhdGg+DQogICA8cGF0aCBkPSJNNyAxMWw1IDVsNSAtNSI+PC9wYXRoPg0KICAgPHBhdGggZD0iTTEyIDRsMCAxMiI+PC9wYXRoPg0KPC9zdmc+');
+	font-family: "tabler-icons";
+	font-size: 1.5em;
+	content: "\ea9d";
 }
 
 .download-button:hover {
