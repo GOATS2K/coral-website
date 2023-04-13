@@ -49,26 +49,6 @@
 	gap: 3em;
 }
 
-.space-evenly {
-	justify-content: space-evenly;
-}
-
-.space-around {
-	justify-content: space-around;
-}
-
-.flex {
-	display: flex;
-}
-
-.col {
-	flex-direction: column;
-}
-
-.bolder {
-	font-weight: 900;
-}
-
 .futuristic-font {
 	font-family: "Michroma", monospace;
 }
