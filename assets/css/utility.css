@@ -2,19 +2,19 @@
 @import url("colors.css");
 
 .m-auto {
-	margin: auto;
+  margin: auto;
 }
 
 .mb-1 {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 .mb-2 {
-	margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .mb-3 {
-	margin-bottom: 3em;
+  margin-bottom: 3em;
 }
 
 .p-1 {
@@ -30,110 +30,110 @@
 }
 
 .p-5 {
-	padding: 5em;
+  padding: 5em;
 }
 
 .p-7 {
-	padding: 7em;
+  padding: 7em;
 }
 
 .gap-1 {
-	gap: 1em;
+  gap: 1em;
 }
 
 .gap-2 {
-	gap: 2em;
+  gap: 2em;
 }
 
 .gap-3 {
-	gap: 3em;
+  gap: 3em;
 }
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .futuristic-font {
-	font-family: "Michroma", monospace;
+  font-family: "Michroma", monospace;
 }
 
 .very-small-icon {
-	font-size: 2em;
+  font-size: 2em;
 }
 
 .small-icon {
-	align-self: center;
-	font-size: 4em;
+  align-self: center;
+  font-size: 4em;
 }
 
 .large-icon {
-	font-size: 6em;
+  font-size: 6em;
 }
 
 .xl-icon {
-	font-size: 12em;
+  font-size: 12em;
 }
 
 .title {
-	font-size: 5em;
-	margin: 0;
+  font-size: 5em;
+  margin: 0;
 }
 
 .small-title {
-	font-size: 3em;
+  font-size: 3em;
 }
 
 .centered {
-	text-align: center;
+  text-align: center;
 }
 
 .centered-items {
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .pipe {
-	height: 12rem;
-	width: 0.125rem;
-	background-color: var(--color-text);
-	opacity: 0.25;
+  height: 12rem;
+  width: 0.125rem;
+  background-color: var(--color-text);
+  opacity: 0.25;
 }
 
 .shadow {
-	/* set position and z-index,
+  /* set position and z-index,
 	 otherwise the div below it will render
 	 on top of the shadow */
-	position: relative;
-	z-index: 10;
-	-webkit-box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
-	-moz-box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
-	box-shadow: 10px 24px 32px 0px rgba(0,0,0,0.38);
+  position: relative;
+  z-index: 10;
+  -webkit-box-shadow: 10px 24px 32px 0px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 10px 24px 32px 0px rgba(0, 0, 0, 0.38);
+  box-shadow: 10px 24px 32px 0px rgba(0, 0, 0, 0.38);
 }
 
 .highlight {
-	color: var(--color-bright);
+  color: var(--color-bright);
 }
 
 .unstyled-button {
-	background: inherit;
-	border: inherit;
-	color: inherit;
-	cursor: pointer;
+  background: inherit;
+  border: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 770px) {
-	div .xl-icon {
-		font-size: 7em;
-	}
+  div .xl-icon {
+    font-size: 7em;
+  }
 
-	div .pipe {
-		height: 7em;
-	}
+  div .pipe {
+    height: 7em;
+  }
 }
 
 .text-block {
-	font-family: 'Courier New', Courier, monospace;
-	background: rgb(255, 255, 255, 0.1);
-	padding: 0.15em;
-	color: rgb(252, 252, 252);
+  font-family: "Courier New", Courier, monospace;
+  background: rgb(255, 255, 255, 0.1);
+  padding: 0.15em;
+  color: rgb(252, 252, 252);
 }
