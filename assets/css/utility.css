@@ -49,6 +49,10 @@
 	gap: 3em;
 }
 
+.flex {
+	display: flex;
+}
+
 .futuristic-font {
 	font-family: "Michroma", monospace;
 }
