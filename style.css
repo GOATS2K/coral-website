@@ -219,6 +219,10 @@ figure {
   content: "\ea9d";
 }
 
+.file-download-button:hover {
+  cursor: not-allowed;
+}
+
 .file-download-button:hover,
 .download-button:hover {
   background-color: var(--color-alt-highlight);
