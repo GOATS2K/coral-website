@@ -212,17 +212,19 @@ figure {
 	gap: 0.5em;
 }
 
-.download-button::before {
+.file-download-button::before {
 	font-family: "tabler-icons";
 	font-size: 1.5em;
 	content: "\ea9d";
 }
 
+.file-download-button:hover,
 .download-button:hover {
 	background-color: var(--color-alt-highlight);
 	border: #c7f7eb 2.5px solid;
 }
 
+.file-download-button,
 .download-button {
 	display: flex;
 	gap: 0.5em;
