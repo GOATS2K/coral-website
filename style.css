@@ -2,14 +2,14 @@
 @import url("/assets/css/utility.css");
 
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 	--header-height: 4em;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 nav {
@@ -22,7 +22,7 @@ nav {
 	height: var(--header-height);
 }
 
-.links > ul {
+.links>ul {
 	padding: 1em;
 	margin: 0;
 	display: flex;
@@ -31,7 +31,8 @@ nav {
 .social-icons {
 	display: flex;
 	align-items: center;
-	padding: 1em;
+	padding: 0.75em;
+	gap: 0.5em;
 }
 
 video {
@@ -95,7 +96,7 @@ figure {
 }
 
 /* nested lists */
-.toc-list-item > ul {
+.toc-list-item>ul {
 	font-size: 1em;
 	list-style: circle;
 }
@@ -158,6 +159,7 @@ figure {
 }
 
 @media screen and (max-width: 770px) {
+
 	/* increase specificity to rank over nth-of-type */
 	div .container.container {
 		flex-direction: column;
@@ -177,12 +179,12 @@ figure {
 		align-items: center;
 	}
 
-	.links > ul > ol {
+	.links>ul>ol {
 		padding-left: 0.5em;
 		margin: 0.1em;
 	}
 
-	.links > ul {
+	.links>ul {
 		padding: 0;
 		margin: 0;
 		display: flex;
@@ -230,9 +232,9 @@ figure {
 	gap: 0.5em;
 	align-items: center;
 	box-sizing: border-box;
-	
+
 	font-family: inherit;
-	
+
 	padding-left: 1em;
 	padding-right: 1em;
 	padding-top: 0.5em;
@@ -242,9 +244,9 @@ figure {
 	/* to prevent size changes on hover */
 	border: #a6b0d4 2.5px solid;
 	color: black;
-	
+
 	cursor: pointer;
-	
+
 	/* border-radius greater than height gives pill shape */
 	border-radius: 100px;
 }
