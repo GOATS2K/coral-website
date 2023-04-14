@@ -11,6 +11,27 @@ html {
   box-sizing: inherit;
 }
 
+nav {
+	display: inline-block;
+	margin: auto;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--color-darker-background);
+}
+
+.links > ul {
+	padding: 1em;
+	margin: 0;
+	display: flex;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+	padding: 1em;
+}
+
 video {
 	max-height: 85%;
 	max-width: 85%;
@@ -26,6 +47,9 @@ a:hover {
 	text-decoration: underline;
 }
 
+.unstyled-link:hover {
+	text-decoration: none;
+}
 
 body {
 	background-color: var(--color-background);
@@ -144,6 +168,22 @@ figure {
 		flex-direction: column;
 		gap: 2em;
 		padding: 2em;
+	}
+
+	.links {
+		display: flex;
+		align-items: center;
+	}
+
+	.links > ul > ol {
+		padding-left: 0.5em;
+		margin: 0.1em;
+	}
+
+	.links > ul {
+		padding: 0;
+		margin: 0;
+		display: flex;
 	}
 }
 
