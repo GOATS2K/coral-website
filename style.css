@@ -26,6 +26,11 @@ nav {
   padding: 1em;
   margin: 0;
   display: flex;
+  list-style-type: none;
+}
+
+.links > ul > li {
+  margin-right: 0.5em;
 }
 
 .social-icons {
@@ -178,15 +183,28 @@ figure {
     align-items: center;
   }
 
-  .links > ul > ol {
-    padding-left: 0.5em;
+  .links > ul > li {
+    padding-left: 0.25em;
     margin: 0.1em;
   }
 
   .links > ul {
-    padding: 0;
-    margin: 0;
     display: flex;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .social-icons {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-left: 0.25em;
+    gap: 0.25em;
+  }
+
+  .very-small-icon {
+    font-size: 1.5em;
   }
 }
 
