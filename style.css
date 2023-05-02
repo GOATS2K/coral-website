@@ -22,14 +22,14 @@ nav {
   height: var(--header-height);
 }
 
-.links>ul {
+.links > ul {
   padding: 1em;
   margin: 0;
   display: flex;
   list-style-type: none;
 }
 
-.links>ul>li {
+.links > ul > li {
   margin-right: 0.5em;
 }
 
@@ -101,7 +101,7 @@ figure {
 }
 
 /* nested lists */
-.toc-list-item>ul {
+.toc-list-item > ul {
   font-size: 1em;
   list-style: circle;
 }
@@ -164,7 +164,6 @@ figure {
 }
 
 @media screen and (max-width: 770px) {
-
   /* increase specificity to rank over nth-of-type */
   div .container.container {
     flex-direction: column;
@@ -184,18 +183,22 @@ figure {
     align-items: center;
   }
 
-  .links>ul>li {
+  .links > ul > li {
     padding-left: 0.5em;
     margin: 0.1em;
   }
 
-  .links>ul {
+  .links > ul {
     display: flex;
     padding: 0;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 380px) {
+  body {
+    overflow-y: auto;
+  }
+
   .social-icons {
     display: flex;
     align-items: center;
@@ -209,20 +212,27 @@ figure {
   }
 }
 
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 530px) {
+  .animated-logo {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 600px) {
   .title {
     font-size: 3em;
+  }
+
+  video {
+    max-height: 50%;
+    max-width: 50%;
   }
 }
 
 @media screen and (max-height: 850px) {
-  .title {
-    font-size: 2.5em;
-  }
-
   video {
-    max-height: 75%;
-    max-width: 75%;
+    max-height: 65%;
+    max-width: 65%;
   }
 }
 
