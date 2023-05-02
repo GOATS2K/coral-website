@@ -11,8 +11,6 @@ const attachEventHandlersForFrontPage = () => {
   console.log("Attached event handlers for front page.");
 };
 
-// macOS renders the video in a different color space
-// idk how to make the video background transparent, so this will have to do
 const changeBackgroundOnMac = () => {
   const newBg = "#444346";
   document.documentElement.style.setProperty("--color-background", newBg);
@@ -106,6 +104,8 @@ switch (window.location.pathname) {
     break;
 }
 
-if (navigator.userAgentData.platform == "macOS") {
+// macOS renders the video in a different color space
+// idk how to make the video background transparent, so this will have to do
+if (navigator.userAgent.includes("Macintosh")) {
   changeBackgroundOnMac();
 }

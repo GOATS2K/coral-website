@@ -213,19 +213,16 @@ figure {
   .title {
     font-size: 3em;
   }
-
-  video {
-    max-height: 45%;
-  }
 }
 
-@media screen and (max-height: 800px) {
+@media screen and (max-height: 850px) {
   .title {
-    font-size: 3em;
+    font-size: 2.5em;
   }
 
   video {
-    max-height: 65%;
+    max-height: 75%;
+    max-width: 75%;
   }
 }
 
