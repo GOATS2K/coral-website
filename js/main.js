@@ -12,7 +12,7 @@ const attachEventHandlersForFrontPage = () => {
 };
 
 const changeBackgroundOnMac = () => {
-  const newBg = "#444346";
+  const newBg = "#444444";
   document.documentElement.style.setProperty("--color-background", newBg);
 }
 
