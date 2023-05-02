@@ -22,14 +22,14 @@ nav {
   height: var(--header-height);
 }
 
-.links > ul {
+.links>ul {
   padding: 1em;
   margin: 0;
   display: flex;
   list-style-type: none;
 }
 
-.links > ul > li {
+.links>ul>li {
   margin-right: 0.5em;
 }
 
@@ -101,7 +101,7 @@ figure {
 }
 
 /* nested lists */
-.toc-list-item > ul {
+.toc-list-item>ul {
   font-size: 1em;
   list-style: circle;
 }
@@ -164,6 +164,7 @@ figure {
 }
 
 @media screen and (max-width: 770px) {
+
   /* increase specificity to rank over nth-of-type */
   div .container.container {
     flex-direction: column;
@@ -183,12 +184,12 @@ figure {
     align-items: center;
   }
 
-  .links > ul > li {
+  .links>ul>li {
     padding-left: 0.25em;
     margin: 0.1em;
   }
 
-  .links > ul {
+  .links>ul {
     display: flex;
     padding: 0;
   }
@@ -205,6 +206,16 @@ figure {
 
   .very-small-icon {
     font-size: 1.5em;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .title {
+    font-size: 3em;
+  }
+
+  video {
+    max-height: 45%;
   }
 }
 
